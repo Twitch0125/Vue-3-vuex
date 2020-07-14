@@ -1,28 +1,44 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="w-full flex">
+      <div
+        class="h-64 flex items-center justify-center mx-auto mt-8 shadow-lg rounded-lg w-5/12 bg-purple-800"
+      >
+        <RootComponent />
+      </div>
+    </div>
+    <div class="w-full flex">
+      <div
+        class="h-64 flex items-center justify-center mx-auto mt-8 shadow-lg rounded-lg w-5/12 bg-pink-600"
+      >
+        <ComponentA />
+      </div>
+      <div
+        class="h-64 flex items-center justify-center mx-auto mt-8 shadow-lg rounded-lg w-5/12 bg-blue-900"
+      >
+        <ComponentB />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import ComponentA from "./components/component-a";
+import ComponentB from "./components/component-b";
+import RootComponent from "./components/root-component";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    RootComponent,
+    ComponentA,
+    ComponentB
   }
-}
+};
 </script>
 
-<style>
+<style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  @apply text-white;
+  font-family: "Inter";
 }
 </style>
